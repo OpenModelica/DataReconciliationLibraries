@@ -17,8 +17,9 @@ equation
   Q3 = Q3_0;
 
   Q1 = Q2 + Q3;
-annotation (__OpenModelica_simulationFlags(
+annotation (experiment(StartTime=0, StopTime=1),
+    __OpenModelica_simulationFlags(
       lv="LOG_JAC", eps = "0.023",
       s="dassl",
-      sx="./ModelicaDataReconciliationSimpleTests/resources/Splitter0_Inputs.csv"));
+      sx="modelica://ModelicaDataReconciliationSimpleTests/resources/Splitter0_Inputs.csv"));
 end Splitter0;

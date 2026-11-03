@@ -8,9 +8,10 @@ parameter Real Q_0 = 10 annotation (__OpenModelica_BoundaryCondition = true);
 equation
     Q1 = Q2;
     Q1 = Q_0;
-annotation (__OpenModelica_simulationFlags(
+annotation (experiment(StartTime=0, StopTime=1),
+    __OpenModelica_simulationFlags(
       lv = "LOG_JAC", eps = "0.023",
       s="dassl",
-      sx="./ModelicaDataReconciliationSimpleTests/resources/PipeCorrelation_Inputs.csv", cx = "./ModelicaDataReconciliationSimpleTests/resources/PipeCorrelation_InputsS_xj.csv"));
+      sx="modelica://ModelicaDataReconciliationSimpleTests/resources/PipeCorrelation_Inputs.csv", cx = "modelica://ModelicaDataReconciliationSimpleTests/resources/PipeCorrelation_InputsS_xj.csv"));
 
 end PipeCorrelation;

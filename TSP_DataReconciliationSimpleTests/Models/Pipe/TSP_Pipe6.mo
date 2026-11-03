@@ -51,9 +51,10 @@ equation
   connect(volumeB1.Cs1,singularPressureLoss2.C1)
     annotation (Line(points={{0,10},{0,10},{0,20},{20,20},{20,20}},color={0,0,255}));
   annotation (
+    experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
       lv="LOG_JAC",
       eps="0.023",
       s="dassl",
-      sx="./TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_Pipe6_Inputs.csv"));
+      sx="modelica://TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_Pipe6_Inputs.csv"));
 end TSP_Pipe6;

@@ -71,9 +71,10 @@ equation
   T1_Q1 = Q1;
   T2_Q2 = Q2;
   T3_Q2 = Q3;
-  annotation (__OpenModelica_simulationFlags(
+  annotation (experiment(StartTime=0, StopTime=1),
+    __OpenModelica_simulationFlags(
       lv="LOG_JAC", eps = "0.023",
 
       s="dassl",
-      sx="./ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.Splitter4_Inputs.csv"));
+      sx="modelica://ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.Splitter4_Inputs.csv"));
 end Splitter4;

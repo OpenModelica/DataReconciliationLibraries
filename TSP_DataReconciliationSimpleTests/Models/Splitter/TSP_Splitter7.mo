@@ -36,9 +36,10 @@ equation
   connect(lumpedStraightPipe1.C2,new_Sink1.C)
     annotation (Line(points={{50,4},{70,4},{70,0},{80,0}},color={0,0,255}));
   annotation (
+    experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
       lv="LOG_JAC",
       eps="0.023",
       s="dassl",
-      sx="./TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_Splitter7_Inputs.csv"));
+      sx="modelica://TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_Splitter7_Inputs.csv"));
 end TSP_Splitter7;

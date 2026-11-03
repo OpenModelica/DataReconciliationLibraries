@@ -9,9 +9,10 @@ equation
   a=c;
   assert(table_real[1] == 1.0, "Assert");
   annotation (
+    experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
       lv="LOG_JAC",
       eps="0.0023",
       s="dassl",
-      sx="./ModelicaDataReconciliationSimpleTests/resources/model_assert_DR.csv"));
+      sx="modelica://ModelicaDataReconciliationSimpleTests/resources/model_assert_DR.csv"));
 end assert;

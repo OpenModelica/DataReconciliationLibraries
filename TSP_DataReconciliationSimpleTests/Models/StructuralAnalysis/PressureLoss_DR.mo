@@ -22,9 +22,10 @@ model PressureLoss_DR
     annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 equation
   annotation (
+    experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
       lv="LOG_JAC",
       s="dassl",
-      sx="./TSP_DataReconciliationSimpleTests/resources/PressureLoss_DR_OS.csv",
+      sx="modelica://TSP_DataReconciliationSimpleTests/resources/PressureLoss_DR_OS.csv",
       variableFilter=".*"));
 end PressureLoss_DR;

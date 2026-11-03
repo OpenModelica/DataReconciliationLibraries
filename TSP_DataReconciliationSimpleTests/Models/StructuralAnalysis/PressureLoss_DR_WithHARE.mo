@@ -8,9 +8,10 @@ model PressureLoss_DR_WithHARE
             uncertain=Uncertainty.refine)))));
 equation
   annotation (
+    experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
       lv="LOG_JAC",
       s="dassl",
-      sx="./TSP_DataReconciliationSimpleTests/resources/PressureLoss_DR_WithHARE_OS.csv",
+      sx="modelica://TSP_DataReconciliationSimpleTests/resources/PressureLoss_DR_WithHARE_OS.csv",
       variableFilter=".*"));
 end PressureLoss_DR_WithHARE;

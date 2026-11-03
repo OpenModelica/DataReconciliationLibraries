@@ -11,9 +11,10 @@ equation
   Q2 = a*Q1;
   Q1 = Q2 + Q3;
   Q4 = Q2 + Q3;
-  annotation (__OpenModelica_simulationFlags(
+  annotation (experiment(StartTime=0, StopTime=1),
+    __OpenModelica_simulationFlags(
       lv="LOG_JAC", eps = "0.023",
 
       s="dassl",
-      sx="./ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.FourFlows_Inputs.csv"));
+      sx="modelica://ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.FourFlows_Inputs.csv"));
 end FourFlows;

@@ -28,9 +28,10 @@ model TSP_Splitter_DR
     annotation (Placement(visible=true,transformation(origin={-1.77636e-15,3.55271e-15},extent={{-40,-40},{40,40}},rotation=0)));
 equation
   annotation (
+    experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
       lv="LOG_JAC",
       eps="0.023",
       s="dassl",
-      sx="./TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_Splitter_DR_Inputs.csv"));
+      sx="modelica://TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_Splitter_DR_Inputs.csv"));
 end TSP_Splitter_DR;

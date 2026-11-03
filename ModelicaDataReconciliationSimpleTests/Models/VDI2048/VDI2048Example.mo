@@ -67,9 +67,10 @@ equation
   mFDKEL + mFDKELL - mSPL - mSPLL + 0.4*mV = 0;
   mSPL + mSPLL - mV - mHK - mA7 - mA6 - mA5 = 0;
   mA7 + mA6 + mA5 - mHDNK = 0;
-  annotation (__OpenModelica_simulationFlags(
+  annotation (experiment(StartTime=0, StopTime=1),
+    __OpenModelica_simulationFlags(
       lv="LOG_JAC", eps = "0.023",
 
       s="dassl",
-      sx="./ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.VDI2048Example_Inputs.csv"));
+      sx="modelica://ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.VDI2048Example_Inputs.csv"));
 end VDI2048Example;

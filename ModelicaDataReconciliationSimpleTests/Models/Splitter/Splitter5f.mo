@@ -118,9 +118,10 @@ equation
   P2 = (T2_P1 + T2_P2)/2;
   P3 = (T3_P1 + T3_P2)/2;
 
-  annotation (__OpenModelica_simulationFlags(
+  annotation (experiment(StartTime=0, StopTime=1),
+    __OpenModelica_simulationFlags(
       lv="LOG_JAC", eps = "0.023",
 
       s="dassl",
-      sx="./ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.Splitter5f_Inputs.csv"));
+      sx="modelica://ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.Splitter5f_Inputs.csv"));
 end Splitter5f;

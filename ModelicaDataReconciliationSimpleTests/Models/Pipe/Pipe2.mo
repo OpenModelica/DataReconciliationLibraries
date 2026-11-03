@@ -11,9 +11,10 @@ equation
   Q2 = Q1;
   y1 = y2;
   Q1 = p;
-  annotation (__OpenModelica_simulationFlags(
+  annotation (experiment(StartTime=0, StopTime=1),
+    __OpenModelica_simulationFlags(
       lv="LOG_JAC", eps = "0.023",
 
       s="dassl",
-      sx="./ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.Pipe2_Inputs.csv"));
+      sx="modelica://ModelicaDataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.Pipe2_Inputs.csv"));
 end Pipe2;

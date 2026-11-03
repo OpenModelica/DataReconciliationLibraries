@@ -75,9 +75,10 @@ equation
   connect(constante1.y,splitter21.Ialpha1)
     annotation (Line(points={{-59,30},{-40,30},{-40,6},{-23,6},{-23,6}},color={0,0,255}));
   annotation (
+    experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
       lv="LOG_JAC",
       eps="0.023",
       s="dassl",
-      sx="./TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_FourFlows_Inputs.csv"));
+      sx="modelica://TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_FourFlows_Inputs.csv"));
 end TSP_FourFlows;

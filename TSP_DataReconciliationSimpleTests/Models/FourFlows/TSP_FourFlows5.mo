@@ -152,9 +152,10 @@ equation
   connect(sourcePQ.C,simpleStaticCondenser.Ef)
     annotation (Line(points={{-2,56},{24,56}},color={0,0,255}));
   annotation (
+    experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
       lv="LOG_JAC",
       eps="0.023",
       s="dassl",
-      sx="./TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_FourFlows5_Inputs.csv"));
+      sx="modelica://TSP_DataReconciliationSimpleTests/resources/NewDataReconciliationSimpleTests.TSP_FourFlows5_Inputs.csv"));
 end TSP_FourFlows5;
