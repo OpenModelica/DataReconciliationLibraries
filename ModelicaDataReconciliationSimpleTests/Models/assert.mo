@@ -7,7 +7,7 @@ model assert
 equation
   a=b;
   a=c;
-  assert(table_real[1] == 1.0, "Assert");
+  assert(abs(table_real[1] - 1.0) < 1e-10, "Assert");
   annotation (
     experiment(StartTime=0, StopTime=1),
     __OpenModelica_simulationFlags(
